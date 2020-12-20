@@ -22,10 +22,21 @@ public class Ejercicio05 {
             "Teresa", "Luis", "Mark", "Jennifer",
             "Alcides"};
         String inicial;
+        char[] letra = new char[7];
+        String[] estudiantes1 = {"","","","","","",""};
+        String m;
         boolean bandera = true;
         while(bandera){
             System.out.println("Ingrese una letra");
             inicial = entrada.nextLine();
+            m = inicial.toUpperCase();
+            for (int i = 0; i < estudiantes.length; i++) {
+                letra[i] = estudiantes[i].charAt(0);
+                estudiantes1[i] = estudiantes1[i] + letra[i];
+                if (m.equals(estudiantes1[i])) {
+                    bandera = false;
+                }
+            }
                     
         }
         
